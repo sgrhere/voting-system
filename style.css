@@ -1,0 +1,198 @@
+:root {
+  --primary: #003366;
+  --secondary: #00509d;
+  --accent: #ffcc00;
+  --light: #f5f5f5;
+  --text: #333;
+  --card-bg: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: var(--light);
+  /* background-image: url(photos/newl2.jpg); */
+  background-position: top bottom;
+  color: var(--text);
+}
+
+.container {
+  max-width: 90vw;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.site-header {
+  background: var(--primary);
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+  border-bottom: 5px solid var(--accent);
+}
+
+.school-logo {
+  width: 60px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.site-header h1 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.top-nav {
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-buttons button {
+  margin: 5px;
+  padding: 10px 16px;
+  border: none;
+  background: var(--secondary);
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.menu-buttons button:hover {
+  background: var(--primary);
+}
+
+.vote-info span {
+  margin: 5px 10px;
+  font-weight: 600;
+}
+
+.voting-section {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.voting-section h2 {
+  font-size: 1.8rem;
+  color: var(--card-bg);
+  margin-bottom: 20px;
+  background-color: var(--primary);
+  border-radius: 5px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+#vote-more-btn {
+  display: none;
+}
+.card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  width: 180px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card .photo {
+  width: 100%;
+  height: 160px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: var(--text);
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.vote-btn {
+  padding: 8px 12px;
+  border: none;
+  background: var(--accent);
+  color: #000;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.vote-btn:hover {
+  background: #e6b800;
+}
+
+.site-footer {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .nav-flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .vote-info {
+    margin-top: 10px;
+  }
+
+  .card {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    width: 100%;
+  }
+}
+.card.selected {
+  border: 3px solid var(--accent);
+  box-shadow: 0 0 10px var(--accent);
+}

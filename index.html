@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NLEBS Voting System</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="photos/log.png" type="image/x-icon" />
+</head>
+
+<body>
+    <audio id="vote-sound" src="sounds/vote-sound.mp3" preload="auto"></audio>
+
+    <header class="site-header">
+        <div class="container">
+            <img src="photos/log.png" alt="Logo" class="school-logo" />
+            <h1>Digital Voting System</h1>
+            <p>New Lumbini English Boarding School, Devdaha-5, Khaireni</p>
+        </div>
+    </header>
+
+    <nav class="top-nav">
+        <div class="container nav-flex">
+            <div class="menu-buttons">
+                <button id="start-btn">Start Voting</button>
+                <button id="see-result-btn">See Result</button>
+                <button id="vote-more-btn">Vote More</button>
+                <button class="finish-btn">Finish Voting</button>
+                <button class="submit-btn">Submit My Vote</button>
+
+            </div>
+            <div class="vote-info">
+                <span id="total-votes-count">Total Votes: <strong>20</strong></span>
+                <span>Votes Casted: <strong id="cast">0</strong></span>
+                <span>Remaining: <strong id="remain">5</strong></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Captain Section -->
+        <section class="voting-section captain">
+            <h2>Captain Candidates</h2>
+            <div class="card-container captain-cards">
+                <!-- Injected by JS -->
+            </div>
+        </section>
+
+        <!-- Vice Captain Section -->
+        <section class="voting-section vice-captain">
+            <h2>Vice Captain Candidates</h2>
+            <div class="card-container vice-captain-cards">
+                <!-- Injected by JS -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Designed & Developed by New Lumbini IT Club</p>
+    </footer>
+
+    <script src="vote.js"></script>
+</body>
+
+</html>
